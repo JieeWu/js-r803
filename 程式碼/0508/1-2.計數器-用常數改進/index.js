@@ -7,5 +7,6 @@ const total = document.getElementById('total');
 
 // 加入事件監聽
 total.addEventListener('click', function () {
-    total.innerText = total.innerText + 1;
+    // 轉換來自網頁上的文字為數字才能相加
+    total.innerText = Number(total.innerText) + 1;
 });
