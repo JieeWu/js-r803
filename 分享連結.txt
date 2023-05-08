@@ -1,0 +1,30 @@
+Visual Studio Code下載:
+
+- https://code.visualstudio.com/
+
+電子書- 從es6開始的javascript學習生活
+
+- https://eyesofkids.gitbooks.io/javascript-start-from-es6/
+
+## linkedin的JavaScript線上測驗考古題
+
+- https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/blob/main/javascript/javascript-quiz.md
+
+中國農曆（陰陽曆）和西元陽曆即公曆互轉JavaScript庫
+
+- https://github.com/jjonline/calendar.js
+
+洗牌演算法詳細(動畫展示)
+
+- https://bost.ocks.org/mike/shuffle/
+- 中文說明文章: https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/
+
+載入指示動畫css
+- https://loading.io/css/
+- https://cssloaders.github.io/
+- https://github.com/linways/simple-content-placeholder
+- https://medium.com/front-end-weekly/react-user-experience-tactics-placeholder-loading-content-fb734da0f9ae
+
+Tic Tac Toe with Javascript
+
+- https://dev.to/bornasepic/pure-and-simple-tic-tac-toe-with-javascript-4pgn
