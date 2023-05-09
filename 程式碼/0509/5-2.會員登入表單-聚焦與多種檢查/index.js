@@ -8,7 +8,6 @@ const login = document.getElementById('login');
 const usernameError = document.getElementById('usernameError');
 const passwordError = document.getElementById('passwordError');
 
-
 // 檢查是否有獲得元素物件
 console.log(username, password, login, usernameError, passwordError);
 
@@ -17,7 +16,7 @@ username.focus();
 
 // 按下登入按鈕，檢查帳號密碼有沒有填
 login.addEventListener('click', function () {
-    // 先回復沒有錯誤的情況
+    // 每次檢查時，先回復沒有錯誤的情況
     usernameError.innerText = '';
     passwordError.innerText = '';
 
@@ -40,10 +39,12 @@ login.addEventListener('click', function () {
     // 同時間username與password都沒填 -> focus username
     if (usernameError.innerText) {
         username.focus();
-        // 此處加上return，是為了終止函式，不會再往下面的password程式碼繼續判斷
-        return; 
+        // 此處加上return，是為了跳出函式運作，不會再往下面的password程式碼繼續判斷
+        // 作為一種在函式中流程判斷的方式，尤其是有先後次序的判斷
+        return;
     }
 
+    // 要username沒出錯，才會判斷到這裡
     if (passwordError.innerText) {
         password.focus();
     }
