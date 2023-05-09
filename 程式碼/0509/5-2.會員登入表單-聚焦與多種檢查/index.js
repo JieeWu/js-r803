@@ -30,6 +30,7 @@ login.addEventListener('click', function () {
         passwordError.innerText += ' 密碼沒填寫';
     }
 
+    // 密碼長度小於6時的判斷
     if (password.value.length < 6) {
         passwordError.innerText += ' 密碼至少需要6個字元';
     }
