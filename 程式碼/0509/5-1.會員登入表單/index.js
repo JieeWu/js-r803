@@ -28,7 +28,7 @@ login.addEventListener('click', function () {
 
 
 
-    // 帳號沒填的情況
+    // 帳號沒填的情況，以下同意義
     // if (username.value === '') {
     // if (username.value.length === 0) {
-    // if (username.value) {
+    // if (!username.value) {
