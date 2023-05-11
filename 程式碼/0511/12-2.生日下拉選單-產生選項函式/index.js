@@ -11,6 +11,7 @@ console.log(yy, mm, dd);
 // params(傳入值): min, max : number
 // return(返回值): string
 function makeOptions(min, max) {
+    // 預設選項，後面可以用來判斷使用者有沒有選擇
     let options = '<option value="0">請選擇</option>';
 
     for (let i = min; i < max + 1; i++) {
