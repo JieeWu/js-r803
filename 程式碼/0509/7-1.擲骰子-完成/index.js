@@ -9,6 +9,7 @@ const start = document.getElementById('start');
 // 檢查
 console.log(dice, point, start);
 
+// 按下開始按鈕
 start.addEventListener('click', function () {
     // 產生一個1~6的隨機整數(數字資料類型)
     const rand = Math.floor(Math.random() * 6) + 1;
