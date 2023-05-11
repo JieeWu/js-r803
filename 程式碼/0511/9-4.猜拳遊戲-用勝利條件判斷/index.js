@@ -15,8 +15,8 @@ console.log(user, com, result, scissors, rock, paper);
 // 宣告一個用於對照的陣列字串組
 const types = ["剪刀", "石頭", "布"];
 
-// 勝利條件，前者勝後者
-const winningMap = ["21", "32", "13"]; // [[2,1], [3,2], [1,3]]
+// 勝利條件，前者勝後者。或用類似陣列中的陣列值 [[2,1], [3,2], [1,3]]
+const winningMap = ["21", "32", "13"];
 
 // 共用的函式，傳入值 userState 代表目前玩家出拳的對應數字值
 function play(userState) {
@@ -37,8 +37,11 @@ function play(userState) {
     }
 
     // 玩家勝 21 32 13
-    // 改用勝利條件的陣列判斷，是否有字串值，有代表勝利
-    if (winningMap.includes(String(userState) + String(comState))) {
+    // 組合目前玩家與電腦狀態值為字串
+    const winningState = String(userState) + String(comState);
+
+    // 用勝利條件的陣列判斷，是否有字串值，有的話代表勝利
+    if (winningMap.includes(winningState)) {
         result.innerText = '結果 :你贏了';
         return; // 已經有結果了，不需要再往下判斷
     }
