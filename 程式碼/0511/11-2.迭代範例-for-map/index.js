@@ -31,6 +31,7 @@ const ag = [9, 1, 1, 5, 6, 7, 8];
 //     return value > 5 ? value * 2 : value;
 // })
 
+// 再精簡過的語法(用箭頭函式)
 const ah = ag.map(v => v > 5 ? v * 2 : v)
 
 console.log("ah=", ah);
@@ -43,6 +44,7 @@ console.log("ah=", ah);
 //     return value * 2;
 // })
 
+// 再精簡過的語法(用箭頭函式)
 const ai = ag.filter(v => v > 5).map(v => v * 2);
 
 console.log("ai=", ai);
