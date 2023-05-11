@@ -15,9 +15,8 @@ console.log(user, com, result, scissors, rock, paper);
 // 宣告一個用於對照的陣列字串組
 const types = ["剪刀", "石頭", "布"];
 
+// 共用的函式，傳入值 userState 代表目前玩家出拳的對應數字值
 function play(userState) {
-    // userState 代表目前使用者出拳的對應數字值
-
     // 呈現user的訊息，查types對照陣列，索引值需要減1
     user.innerText = `你出了: ${types[userState - 1]}`;
 
@@ -28,7 +27,6 @@ function play(userState) {
     com.innerText = `電腦出了: ${types[comState - 1]}`;
 
     // 以玩家角度，判斷 勝/負/平手 三種情況
-
     // 平手 11 22 33 
     if (userState === comState) {
         result.innerText = '結果 :平手';
