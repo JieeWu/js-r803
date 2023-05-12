@@ -32,3 +32,7 @@ Visual Studio Code下載:
 ## 建立包含1...N的陣列
 
 - https://stackoverflow.com/questions/3746725/how-to-create-an-array-containing-1-n
+
+## 分割陣列為分塊(chunk) (Split array into chunks)
+
+- https://stackoverflow.com/questions/8495687/split-array-into-chunks
