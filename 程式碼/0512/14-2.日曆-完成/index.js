@@ -26,22 +26,29 @@ console.log(weekdayFirst);
 
 // 建立資料陣列
 
-// 計算要需要多少陣列成員(長度)
+// 計算要需要多少陣列成員(長度)，星期日(剛好是0)時不需要額外成員
 const numberOfMember = days + weekdayFirst;
 
 // 所有資料的陣列
 const allData = [];
 
 for (let i = 0; i < numberOfMember; i++) {
+    // 星期日(剛好是0)時不需要額外成員，1的時候一個額外成員""…以此類推
     if (i < weekdayFirst) {
         allData.push("");
     } else {
+        // 因weedayFirst是陣列索引值，所以要再加1才是它的代表值
+        // 例如第1天為星期三，weekdayFirst=3
+        // 上面0,1,2均為""成員
+        // 到i=3之後會進到此運算，`3-3+1`為第1天呈現數字
+        // `4-3+1`為第2天呈現數字…以此類推
         allData.push(i - weekdayFirst + 1);
     }
 }
 
 console.log(allData);
 
+// 用for迴圈，以tr+td呈現在表格上
 let display = '<tr>';
 
 for (let i = 0; i < allData.length; i++) {
