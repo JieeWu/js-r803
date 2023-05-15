@@ -15,6 +15,7 @@ const search = document.getElementById('search');
  */
 const studentName = document.getElementById('studentName');
 
+// 檢查
 //console.log(data, search, studentName);
 
 // 拆解學生資料，每列
@@ -97,6 +98,7 @@ search.addEventListener('click', function () {
     if (studentName.value) {
         // 出現過濾後的資料
         const newStudents = students.filter(function (v) {
+            // 學生姓名有包含輸入要查詢的字串時，回傳true，會包含這個學生物件到新的陣列中
             return v.name.includes(studentName.value);
         })
 
