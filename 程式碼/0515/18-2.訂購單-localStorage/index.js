@@ -63,15 +63,16 @@ const data = document.getElementById('data');
 let cart = [];
 
 if (localStorage.getItem('cart')) {
-    // 從localStorage得到cart儲存的值
+    // 從localStorage得到鍵是"cart"儲存的值
     const cartJson = localStorage.getItem('cart');
 
     // cart轉為js的資料格式(物件陣列)
-    // 前提假設parse不會發生格式錯誤，不然要用try...catch
+    // 前提假設parse不會發生格式錯誤，不然要用try...catch才保証不會在應用錯誤時整個中斷
     cart = JSON.parse(cartJson);
 
 } else {
-    // 商品資料要轉為json字串再設定進入
+    // 商品資料要轉為json字串再設定到localStorage中
+    // localStorage"只能"儲存字串類型
     localStorage.setItem('cart', JSON.stringify(products));
 
     // 第一次或localStorage中沒有記錄時，使用原始資料
