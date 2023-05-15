@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    picture: 'https://via.placeholder.com/100',
+    picture: 'https://via.placeholder.com/48',
     stock: 5,
     name: 'iPhone 12 Pro',
     price: 25000,
@@ -9,7 +9,7 @@ const products = [
   },
   {
     id: 2,
-    picture: 'https://via.placeholder.com/100',
+    picture: 'https://via.placeholder.com/48',
     stock: 5,
     name: 'iPhone 12',
     price: 15000,
@@ -17,7 +17,7 @@ const products = [
   },
   {
     id: 3,
-    picture: 'https://via.placeholder.com/100',
+    picture: 'https://via.placeholder.com/48',
     stock: 10,
     name: 'iPhone SE',
     price: 12500,
@@ -25,7 +25,7 @@ const products = [
   },
   {
     id: 4,
-    picture: 'https://via.placeholder.com/100',
+    picture: 'https://via.placeholder.com/48',
     stock: 10,
     name: 'iPhone XS',
     price: 22000,
@@ -33,7 +33,7 @@ const products = [
   },
   {
     id: 5,
-    picture: 'https://via.placeholder.com/100',
+    picture: 'https://via.placeholder.com/48',
     stock: 6,
     name: 'Google Pixel 5',
     price: 17000,
@@ -41,7 +41,7 @@ const products = [
   },
   {
     id: 6,
-    picture: 'https://via.placeholder.com/100',
+    picture: 'https://via.placeholder.com/48',
     stock: 6,
     name: 'Google Pixel 4',
     price: 15500,
