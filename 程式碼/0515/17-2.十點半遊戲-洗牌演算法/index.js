@@ -30,6 +30,19 @@ function createCard(suit, point) {
   };
 }
 
+// 洗牌演算法
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+
+  return array;
+}
+
 // 產生一副牌的函式
 function initCards() {
   const cards = [];
@@ -46,7 +59,8 @@ function initCards() {
     }
   }
 
-  return cards;
+  // 回傳洗牌後的陣列
+  return shuffleArray(cards);
 }
 
 // 呼叫，產生一副卡牌
