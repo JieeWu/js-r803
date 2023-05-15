@@ -14,7 +14,7 @@ const rows = rawData.split('\n');
 
 // 計算科目平均值的函式
 // 傳入 studentArray= 學生物件陣列, subject=科目(字串)
-// 回傳 保留小數點2位字串
+// 回傳 保留小數點2位(字串)
 function AverageSubject(studentArray, subject) {
     let total = 0;
 
@@ -25,6 +25,7 @@ function AverageSubject(studentArray, subject) {
         total += student[subject];
     }
 
+    // 回傳，計算平均與保留小數點2位
     return (total / studentArray.length).toFixed(2);
 }
 
@@ -64,11 +65,11 @@ const displayList = students.map(function (v) {
 
 //console.log(displayList);
 const displayAverage = `<tr>
-<td>各科平均</td>
-<td>${AverageSubject(students, 'chinese')}</td>
-<td>${AverageSubject(students, 'math')}</td>
-<td>${AverageSubject(students, 'english')}</td>
-<td></td>
-</tr>`
+                            <td>各科平均</td>
+                            <td>${AverageSubject(students, 'chinese')}</td>
+                            <td>${AverageSubject(students, 'math')}</td>
+                            <td>${AverageSubject(students, 'english')}</td>
+                            <td></td>
+                        </tr>`
 
 data.innerHTML = displayList.join("") + displayAverage;
