@@ -116,6 +116,7 @@ function display(cart) {
             </tr>`;
     });
 
+    //計算總數量和總價格
     let totalNumber = 0;
     let totalPrice = 0;
 
@@ -137,6 +138,7 @@ function display(cart) {
 
     // 每次重新呈現頁面上的資訊，需要重新加入按鈕事件監聽
     // +1按鈕
+    // 也可以使用 `const addButtons = document.querySelectorAll(".add")`
     const addButtons = document.getElementsByClassName('add');
 
     for (let i = 0; i < addButtons.length; i++) {
