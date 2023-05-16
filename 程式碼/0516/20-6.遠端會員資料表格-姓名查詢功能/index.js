@@ -18,6 +18,7 @@ const fullName = document.getElementById('fullName');
 // server url
 const url = 'https://my-json-server.typicode.com/eyesofkids/json-fake-data/users';
 
+// 呈現用函式
 function display(users) {
     const displayList = users.map((v) => {
         return `<tr>
@@ -30,9 +31,8 @@ function display(users) {
     data.innerHTML = displayList.join("");
 }
 
-
-
 // async-await
+// 查詢用函式
 async function getUsersByName(fullName) {
     // 呈現動畫，隱藏表格
     loader.style.display = "block";
@@ -51,6 +51,7 @@ async function getUsersByName(fullName) {
     }, 1500);
 }
 
+// 獲得所有會員資料的函式
 async function getUsers() {
     // 呈現動畫，隱藏表格
     loader.style.display = "block";
@@ -69,7 +70,7 @@ async function getUsers() {
     }, 1500);
 }
 
-// 呼叫函式，向伺服器要求資料
+// 第一次呈現先呼叫函式，向伺服器要求所有資料
 getUsers();
 
 // 按下查詢按鈕
