@@ -94,23 +94,26 @@ getUsers();
 
 // 按下查詢按鈕
 search.addEventListener('click', function () {
-    // 有輸入姓名要查詢時，依伺服器查詢的結果重新呈現
+    // 有輸入姓名要查詢時，使用js直接過濾一開始設定好的allUsers變數
     if (fullName.value) {
         //getUsersByName(fullName.value);
-        loading(true);
+        //loading(true);
         // 單純只用js作查詢過濾
-        const filterUsers = allUsers.filter((v) => {
+        const filteredUsers = allUsers.filter((v) => {
             return v.name.includes(fullName.value);
         });
 
-        display(filterUsers);
-        
-        loading(false);
+        display(filteredUsers);
+
+        // loading(false);
     } else {
         // getUsers();
+        //loading(true);
 
         // 單純只用js作查詢過濾
         display(allUsers);
+
+        // loading(false);
     }
 })
 
