@@ -38,10 +38,13 @@ async function getUsersByName(fullName) {
     loader.style.display = "block";
     dataTable.style.display = "none";
 
-    //向伺服器要求資料載入，後面要加條件
-    const res = await fetch(url + `?name_like=${fullName}`, { method: 'get' }); //第一次回傳是response物件
-    const users = await res.json(); // 要轉為js的物件陣列資料
-    display(users); // 呈現資料
+    // 向伺服器要求資料載入，後面要加條件
+    // 第一次回傳是response物件
+    const res = await fetch(url + `?name_like=${fullName}`, { method: 'get' });
+    // 要轉為js的物件陣列資料
+    const users = await res.json();
+    // 呈現資料
+    display(users);
 
     // 呈現表格，隱藏動畫
     // 因回應速度太快，所以撥放約1.5秒動畫再關起
@@ -57,10 +60,13 @@ async function getUsers() {
     loader.style.display = "block";
     dataTable.style.display = "none";
 
-    //向伺服器要求資料載入
-    const res = await fetch(url, { method: 'get' }); //第一次回傳是response物件
-    const users = await res.json(); // 要轉為js的物件陣列資料
-    display(users); // 呈現資料
+    // 向伺服器要求資料載入
+    // 第一次回傳是response物件
+    const res = await fetch(url, { method: 'get' });
+    // 要轉為js的物件陣列資料
+    const users = await res.json();
+    // 呈現資料
+    display(users);
 
     // 呈現表格，隱藏動畫
     // 因回應速度太快，所以撥放約1.5秒動畫再關起
