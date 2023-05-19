@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20.遠端會員資料表格</title>
+    <style>
+        .lds-facebook {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-facebook div {
+            display: inline-block;
+            position: absolute;
+            left: 8px;
+            width: 16px;
+            background: #d55555;
+            animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+        }
+
+        .lds-facebook div:nth-child(1) {
+            left: 8px;
+            animation-delay: -0.24s;
+        }
+
+        .lds-facebook div:nth-child(2) {
+            left: 32px;
+            animation-delay: -0.12s;
+        }
+
+        .lds-facebook div:nth-child(3) {
+            left: 56px;
+            animation-delay: 0;
+        }
+
+        @keyframes lds-facebook {
+            0% {
+                top: 8px;
+                height: 64px;
+            }
+
+            50%,
+            100% {
+                top: 24px;
+                height: 32px;
+            }
+        }
+
+        /* table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>20.遠端會員資料表格</h1>
+    <input type="text" placeholder="輸入姓名" id="studentName"> <button id="search">查詢</button>
+    <hr>
+    <input type="radio" name="ageType" value="大於等於20"><label> 大於等於20</label>
+    <input type="radio" name="ageType" value="小於20"><label>小於20</label>
+    <button id="resetAgeType">重設</button>
+    <hr>
+    <button id="ageSortAsc">年紀由小至大</button> <button id="ageSortDesc">年紀由大至小</button>
+    <hr>
+    <div id="loader" class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>學號</th>
+                <th>姓名</th>
+                <th>年齡</th>
+            </tr>
+        </thead>
+        <tbody id="dataTbody">
+        </tbody>
+    </table>
+
+    <!-- ESM 模組載入 -->
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
